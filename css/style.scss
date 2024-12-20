@@ -5,9 +5,9 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  top: -267px;
-  transform: scale(1.2, 1.2);
-  opacity: 0;
+  // top: -267px;
+  // transform: scale(1.2, 1.2);
+  // opacity: 0;
   transition: opacity 2s ease;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .swiper, .swiper2, .swiper3, .swiper4, .swiper5, .swiper6 {
-  width: 1800px;
+  // width: 1800px;
   -webkit-transform: rotate(-25deg);
   transform: rotate(-25deg);
 }
@@ -26,8 +26,9 @@
 }
 
 img {
-  width: 1750px;
-  height: 30vh;
+  // width: 1750px;
+  width: 100%;
+  // height: 30vh;
 }
 
 .swiper {
@@ -41,6 +42,9 @@ img {
 
 .swiper2, .swiper3, .swiper4, .swiper5, .swiper6 {
   margin-top: 80px;
+  @media (max-width: 780px) {
+    margin-top: 30px;
+  }
 }
 
 .swiper-wrapper {

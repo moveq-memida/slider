@@ -6,6 +6,7 @@ const swipers = [
       reverseDirection: true,
     },
     loop: true,
+    loopAdditionalSlides: 1,
     slidesPerView: 1,
     speed: 50000,
     allowTouchMove: false,
@@ -16,6 +17,7 @@ const swipers = [
       disableOnInteraction: false,
     },
     loop: true,
+    loopAdditionalSlides: 1,
     slidesPerView: 1,
     speed: 50000,
     allowTouchMove: false,
@@ -27,6 +29,7 @@ const swipers = [
       reverseDirection: true,
     },
     loop: true,
+    loopAdditionalSlides: 1,
     slidesPerView: 1,
     speed: 50000,
     allowTouchMove: false,
@@ -37,6 +40,7 @@ const swipers = [
       disableOnInteraction: false,
     },
     loop: true,
+    loopAdditionalSlides: 1,
     slidesPerView: 1,
     speed: 50000,
     allowTouchMove: false,
@@ -48,6 +52,7 @@ const swipers = [
       reverseDirection: true,
     },
     loop: true,
+    loopAdditionalSlides: 1,
     slidesPerView: 1,
     speed: 50000,
     allowTouchMove: false,
@@ -58,12 +63,22 @@ const swipers = [
       disableOnInteraction: false,
     },
     loop: true,
+
     slidesPerView: 1,
     speed: 50000,
     allowTouchMove: false,
   })
 ];
 
+// // resizeイベント追加
+function updateSwipersOnResize() {
+  swipers.forEach(swiper => {
+    swiper.autoplay.paused = false;
+    swiper.autoplay.start();
+  });
+}
+
+window.addEventListener('resize', updateSwipersOnResize);
 
 function controlVisibility() {
   setTimeout(() => {
@@ -79,4 +94,4 @@ function controlVisibility() {
   }, 5000);
 }
 
-controlVisibility();
+// controlVisibility();
